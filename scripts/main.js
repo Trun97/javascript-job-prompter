@@ -71,22 +71,42 @@ const departments = {
     }
 }
 
-console.log(departments);
-console.log("De afdeling Sales heeft" + " " + departments.sales.numberOfEmployees + " " + "medewerkers.");
-console.log("Marketing is een leuke afdeling om voor te werken." + departments.marketing.description);
-console.log("De afdeling Customer Service heeft" + " " + departments["customer-service"].numberOfEmployees + " " + "medewerkers");
-console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." + " " + departments.sales.jobs[1].description);
+//console.log(departments);
+//console.log("De afdeling Sales heeft" + " " + departments.sales.numberOfEmployees + " " + "medewerkers.");
+//console.log("Marketing is een leuke afdeling om voor te werken." + departments.marketing.description);
+//console.log("De afdeling Customer Service heeft" + " " + departments["customer-service"].numberOfEmployees + " " + "medewerkers");
+//console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." + " " + departments.sales.jobs[1].description);
 
-let userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+//let userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
 
-if (userInput === "marketing") {
-    console.log("Je koos Marketing." +" " + departments.marketing.description);
-} else if (userInput == "sales") {
-    console.log("Je koos Sales." +" " +departments.sales.description);
-} else if (userInput == "customer-service") {
-    console.log("Je koos customer-service." +" " +departments["customer-service"].description);
-} else {
-    console.log("Ongeldige keuze")
+//if (userInput === "marketing") {
+//    console.log("Je koos Marketing." +" " + departments.marketing.description);
+//} else if (userInput === "sales") {
+//    console.log("Je koos Sales." +" " +departments.sales.description);
+//} else if (userInput === "customer-service") {
+//    console.log("Je koos Customer-service." +" " +departments["customer-service"].description);
+//} else {
+//    console.error("Ongeldige keuze")
+//}
+
+let userInput2 = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in.")
+
+switch (userInput2) {
+    case'0':
+        console.log("Je koos" + " " + departments.marketing.jobs[0].title + "." + " " + "Een uitdagende rol!" + " " + departments.marketing.jobs[0].description);
+        break;
+    case'1':
+        console.log("Je koos" + " " + departments.marketing.jobs[1].title + "." + " " + "Een uitdagende rol!" + " " + departments.marketing.jobs[1].description);
+        break
+    case'2':
+        console.log("Je koos" + " " + departments.marketing.jobs[2].title + "." + " " + "Een uitdagende rol!" + " " + departments.marketing.jobs[2].description);
+        break;
+    case'3':
+        console.log("Je koos" + " " + departments.marketing.jobs[3].title + "." + " " + "Een uitdagende rol!" + " " + departments.marketing.jobs[3].description);
+        break;
+    case'4':
+        console.log("Je koos" + " " + departments.marketing.jobs[3].title + "." + " " + "Een uitdagende rol!" + " " + departments.marketing.jobs[4].description);
+        break;
+    default:
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
 }
-
-
