@@ -71,4 +71,22 @@ const departments = {
     }
 }
 
-console.log(departments);
+//console.log(departments);
+//console.log("De afdeling Sales heeft" + " " + departments.sales.numberOfEmployees + " " + "medewerkers.");
+//console.log("Marketing is een leuke afdeling om voor te werken." + departments.marketing.description);
+//console.log("De afdeling Customer Service heeft" + " " + departments["customer-service"].numberOfEmployees + " " + "medewerkers");
+//console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." + " " + departments.sales.jobs[1].description);
+
+let userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+
+if (userInput === "marketing") {
+    console.log(departments.marketing.description);
+} else if (userInput == "sales") {
+    console.log(departments.sales.description);
+} else if (userInput == "customer-service") {
+    console.log(departments["customer-service"].description);
+} else {
+    console.log("Ongeldige keuze")
+}
+
+
