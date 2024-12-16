@@ -89,11 +89,13 @@ if (userInput === "marketing") {
     console.error("Ongeldige keuze")
 }
 
- let userInput2 = prompt("Je koos" + " "+  userInput + " " +  "Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in. " +
-     "0:" + departments[userInput].title,
-     "1:" + departments[userInput].title,
-     "2:" + departments[userInput].title,
-     "3:" + departments[userInput].title)
+let userInput2 = prompt(
+    `Je koos ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in.
+    0: ${departments[userInput].jobs[0].title}
+    1: ${departments[userInput].jobs[1].title}
+    2: ${departments[userInput].jobs[2].title}
+    3: ${departments[userInput].jobs[3].title}`
+);
 
 switch (userInput2) {
     case'0':console.log("Je koos" + " " + departments[userInput].jobs[0].title + "." + " " + "Een uitdagende rol!" + " " + departments[userInput].jobs[0].description);
@@ -115,5 +117,4 @@ switch (userInput2) {
   }
 
 
-
-
+document.getElementById('role-title').textContent = 'Tarun!';
